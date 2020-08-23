@@ -3,27 +3,32 @@
 # 1-1 $variable to use variable 
 CMD=`realpath $0`
 COMMON_DIR=`dirname $CMD`
-echo "1-1 \$variable to use variable"
-echo "realpath: $CMD"
-echo "COMMAND DIR: $COMMON_DIR"
+echo -e "1-1 \$variable to use variable"
+echo -e "realpath: $CMD"
+echo -e "COMMAND DIR: $COMMON_DIR\n"
 
-# 1-2 ${variable} to use variable to seprate words
-echo "1-2 \${variable} to use variable to seprate words"
+# 1-2 ${var} to use variable to seprate words
+echo -e "1-2 \${variable} to use variable to seprate words"
 x=1
-echo "${x}yz"
+echo -e "${x}yz\n"
+
+# 1-3 ${var:-word} to return word if var is empty
+echo -e "1-3 \${var:-word} to return word if var is empty"
+var3=
+echo -e "return allsave if var3 is empty: ${var3:-allsave}\n"
 
 # 2-1 $0 to use current path
-echo "2-1 \$0 to use current path"
-echo `realpath $0`
+echo -e "2-1 \$0 to use current path"
+echo -e `realpath $0\n`
 
 # 3-1 ${#} string length
-echo "3-1 \${#} to get string length"
+echo -e "3-1 \${#} to get string length"
 str="abc"
-echo "length of str is: ${#str}"
+echo -e "length of str is: ${#str}\n"
 
 # 4-1 $@ to pass param | $*
-echo "4-1 \$@ to pass param | \$*"
-sh ./param.sh "a" "b" "c" "d"
+echo -e "4-1 \$@ to pass param | \$*"
+sh ./param.sh "a" "b" "c" "d\n"
 
 
 # 5-1 exit shell script
