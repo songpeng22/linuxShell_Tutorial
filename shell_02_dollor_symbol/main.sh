@@ -19,7 +19,10 @@ echo -e "return allsave if var3 is empty: ${var3:-allsave}\n"
 
 # 2-1 $0 to use current path
 echo -e "2-1 \$0 to use current path"
-echo -e `realpath $0\n`
+echo -e `realpath $0`
+echo -e "2-1 \$BASH_SOURCE to use current path"
+var4=`realpath $BASH_SOURCE`
+echo -e "\$BASH_SOURCE is $var4.\n"
 
 # 3-1 ${#} string length
 echo -e "3-1 \${#} to get string length"
