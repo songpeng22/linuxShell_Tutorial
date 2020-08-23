@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo ./build.sh --help
+sudo ./build.sh --help 

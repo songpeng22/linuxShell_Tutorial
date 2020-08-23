@@ -4,11 +4,11 @@
 
 
 echo "call function."
-echo " "
+echo "\$@ is: $@"
 
 function usage()
 {
-	echo "\$@ is: $@"
+	echo "\$@ lost its value in function, which is: $@"
 	echo " "
 
         echo "Usage: build.sh [OPTIONS]"
@@ -37,7 +37,9 @@ function usage()
         echo "Default option is 'allsave'."
 }
 
-
+if echo $@ ; then
+	echo "\$@ is true."
+fi	
 
 
 if echo $@|grep -wqE "help|-h"; then
