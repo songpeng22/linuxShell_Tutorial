@@ -9,6 +9,7 @@ echo "\$*=" $*
 echo "\"\$*\"=" "$*"
 echo "\$@=" $@
 echo "\"\$@\"=" "$@"
+echo "\${@} is ${@}"
 echo "print each param from \$*"
 for var in $*
 do

@@ -49,6 +49,18 @@ echo ----oldboy trainning failure-----  &&  $SETCOLOR_FAILURE
 echo ----oldboy trainning warning-----  &&  $SETCOLOR_WARNING
 echo ----oldboy trainning normal-----  &&  $SETCOLOR_NORMAL
 
+# local variable
+local_test()
+{
+    local a b c d
+    a=1
+    b=2
+    c=3
+    d=4
+    echo "local variable c is $c"
+}
+local_test
+
 # exit
 exit 2
 echo "fourth hello"
