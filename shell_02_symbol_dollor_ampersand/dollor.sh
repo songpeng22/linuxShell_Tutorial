@@ -33,6 +33,12 @@ echo -e "length of str is: ${#str}\n"
 echo -e "4-1 \$@ to pass param | \$*"
 sh ./param.sh "a" "b" "c" "d\n"
 
+# 5-1 concatenate strings
+echo "enter first string:"
+read str1
+echo "enter second string:"
+read str2
+echo $str1$str2
 
 # 5-1 exit shell script
 exit 2
