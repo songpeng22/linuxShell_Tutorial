@@ -39,8 +39,18 @@ read str1
 echo "enter second string:"
 read str2
 echo $str1$str2
+echo -e "\n"
 
-# 5-1 exit shell script
+# 6-1 echo arrays
+ARR=(aaa bbb ccc)
+echo "arrays is: ${ARR[*]}"
+echo "first element:${ARR[0]}"
+for element in ${ARR[@]}
+do
+    echo "\$element is $element"
+done
+
+# 7-1 exit shell script
 exit 2
 
 
