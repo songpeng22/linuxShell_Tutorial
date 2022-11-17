@@ -17,3 +17,13 @@ do
     echo "数组的元素${index}为: ${my_array[${index}]}"
     index=$((index + 1));
 done
+
+compiler_array[0]="armv7a-linux-androideabi21-clang++"
+compiler_array[1]="aarch64-linux-android21-clang++"
+compiler_array[2]="arm-linux-gnueabihf-g++"
+compiler_array[3]="aarch64-linux-gnu-g++"
+
+echo "elements[0] is:${compiler_array[0]}"
+echo "elements[1] is:${compiler_array[1]}"
+echo "elements[2] is:${compiler_array[2]}"
+echo "elements[3] is:${compiler_array[3]}"
